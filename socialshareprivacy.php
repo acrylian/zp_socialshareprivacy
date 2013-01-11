@@ -1,16 +1,16 @@
 <?php
 /**
  * A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons 
- * (Facebook,Twitter, Google+ and more). This is an adaption as a Zenphoto plugin of:
- * jquery.socialshareprivacy.js | 2 Klicks fuer mehr Datenschutz
+ * (Facebook,Twitter, Google+ and more). 
  *
+ * This is an adaption as a Zenphoto plugin of:
+ * jquery.socialshareprivacy.js | 2 Klicks fuer mehr Datenschutz
  * http://www.heise.de/extras/socialshareprivacy/
  * http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html
  *
  * Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
- * and extended by:
  * Copyright (c) 2012 Mathias Panzenböck
  * https://github.com/panzi/SocialSharePrivacy
  *
@@ -21,16 +21,17 @@
  *
  * The plugin does not provide any options for the sharing itself. Modify the jQuery calls within printSocialSharePrivacyButtons() to your liking.
  *
- * Note: The button text are available in English, French and German. The plugin itself is not yet translated.
+ * Note: The button texts are available in English, French and German. The plugin text itself are not yet translated.
  *
  *
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @author Malte Müller (acrylian)
+ * @author Malte Müller (acrylian) adapting from Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
+ * Heise Zeitschriften Verlag GmbH & Co. KG and Mathias Panzenböck
  *
  * @package plugins
  */
 
-$plugin_description = gettext_pl('A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and more). An adaption as Zenphoto plugin of http://www.heise.de/extras/socialshareprivacy/ and https://github.com/panzi/SocialSharePrivacy - MIT License (http://www.opensource.org/licenses/mit-license.php).',"socialshareprivacy");
+$plugin_description = gettext_pl('A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and more). An adaption as a Zenphoto plugin of the scripts by http://www.heise.de/extras/socialshareprivacy/ and https://github.com/panzi/SocialSharePrivacy - MIT License (http://www.opensource.org/licenses/mit-license.php).',"socialshareprivacy");
 $plugin_author = 'Malte Müller (acrylian)';
 $plugin_version = '1.4.4';
 $option_interface = 'socialshareprivacy_options';
