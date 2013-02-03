@@ -73,7 +73,7 @@ class socialshareprivacy_options {
 					gettext_pl('delicious','socialshareprivacy')=>'socialshareprivacy_delicious',
 					gettext_pl('disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
 				),
-				'desc' => gettext_pl('Select the social networks you wish buttons to appear','socialshareprivacy'))
+				'desc' => gettext_pl('NOTE: CURRENTLY NOT IMPLEMENTED! Select the social networks you wish buttons to appear','socialshareprivacy'))
 		);
 		
 	return $options;
@@ -85,22 +85,22 @@ class socialshareprivacy_options {
 function socialshareprivacyJS() {
 	$locale = getUserLocale();
 	?>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/jQuery-Cookies/raw/master/jquery.cookies.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.facebook.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.twitter.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.gplus.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.tumblr.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.reddit.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.pinterest.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.flattr.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.stumbleupon.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.mail.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.linkedin.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.xing.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script>
-	<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/jquery.cookies.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.facebook.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.twitter.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.gplus.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.tumblr.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.reddit.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.pinterest.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.flattr.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.stumbleupon.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.mail.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.linkedin.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.xing.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script>
 	<?php
 	$dir = '';
 	
@@ -117,21 +117,21 @@ function socialshareprivacyJS() {
   	case 'de_DE':
   	case 'fr_FR':
  		 ?>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script>
-			<script type="text/javascript" src="<?php echo SERVERPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script>
+			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script>
   		<?php
   		break;
   }
@@ -148,6 +148,8 @@ function printSocialSharePrivacyButtons($class='socialshareprivacy') {
 		// <![CDATA[
 		// Default order of buttons:
 		$.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'xing'];
+		$.fn.socialSharePrivacy.settings.path_prefix = '<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/';
+		$.fn.socialSharePrivacy.settings.css_path = 'stylesheets/jquery.socialshareprivacy.css';
 		//$.fn.socialSharePrivacy.settings.path_prefix = '../';
 
 		$(document).ready(function () {
