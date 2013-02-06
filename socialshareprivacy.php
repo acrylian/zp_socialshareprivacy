@@ -60,7 +60,7 @@ class socialshareprivacy_options {
 				'checkboxes' => array( // The definition of the checkboxes
 					gettext_pl('Facebook','socialshareprivacy')=>'socialshareprivacy_facebook',
 					gettext_pl('Twitter','socialshareprivacy')=>'socialshareprivacy_twitter',
-					gettext_pl('Google+','socialshareprivacy')=>'socialshareprivacy_googleplus',
+					gettext_pl('Google+','socialshareprivacy')=>'socialshareprivacy_gplus',
 					gettext_pl('Tumblr','socialshareprivacy')=>'socialshareprivacy_tumblr',
 					gettext_pl('Reddit','socialshareprivacy')=>'socialshareprivacy_Reddit',
 					gettext_pl('Pinterest','socialshareprivacy')=>'socialshareprivacy_pinterest',
@@ -86,21 +86,21 @@ function socialshareprivacyJS() {
 	$locale = getUserLocale();
 	?>
 	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/jquery.cookies.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.facebook.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.twitter.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.gplus.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.tumblr.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.reddit.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.pinterest.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.flattr.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.stumbleupon.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.mail.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.linkedin.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.xing.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_facebook')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.facebook.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_twitter')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.twitter.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_gplus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.gplus.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_tumblr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.tumblr.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_reddit')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.reddit.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_pinterest')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.pinterest.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_flattr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.flattr.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_stumbleupon')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.stumbleupon.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_mail')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.mail.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_linkedin')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.linkedin.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_xing')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.xing.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_buffer')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_delicious')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script><?php } ?>
 	<?php
 	$dir = '';
 	
@@ -112,26 +112,30 @@ function socialshareprivacyJS() {
   	case 'fr_FR':
   		$dir = '/fr';
   		break;
+  	case 'nl_NL':
+  		$dir = '/nl';
+  		break;
   }
   switch($locale) {
   	case 'de_DE':
   	case 'fr_FR':
+  	case 'nl_NL':
  		 ?>
 			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script>
-			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script>
+			<?php if(getOption('socialshareprivacy_facebook')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_twitter')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_gplus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_tumblr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_reddit')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_pinterest')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_flattr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_stumbleupon')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_mail')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_linkedin')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_xing')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_buffer')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_delicious')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script><?php } ?>
+			<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script><?php } ?>
   		<?php
   		break;
   }
@@ -150,8 +154,6 @@ function printSocialSharePrivacyButtons($class='socialshareprivacy') {
 		$.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'xing'];
 		$.fn.socialSharePrivacy.settings.path_prefix = '<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/';
 		$.fn.socialSharePrivacy.settings.css_path = 'stylesheets/jquery.socialshareprivacy.css';
-		//$.fn.socialSharePrivacy.settings.path_prefix = '../';
-
 		$(document).ready(function () {
 			$('.<?php echo $class; ?>').socialSharePrivacy();
 		});
