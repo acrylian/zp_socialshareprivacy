@@ -12,7 +12,7 @@
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
  * Copyright (c) 2012 Mathias Panzenböck
- * https://github.com/panzi/SocialSharePrivacy
+ * https://github.com/panzi/socialshareprivacy
  *
  * A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and others). 
  *
@@ -32,7 +32,7 @@
  */
 
 $plugin_is_filter = 9|THEME_PLUGIN;
-$plugin_description = gettext('A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and more). An adaption as a Zenphoto plugin of the scripts by http://www.heise.de/extras/socialshareprivacy/ and https://github.com/panzi/SocialSharePrivacy - MIT License (http://www.opensource.org/licenses/mit-license.php).');
+$plugin_description = gettext('A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and more). An adaption as a Zenphoto plugin of the scripts by http://www.heise.de/extras/socialshareprivacy/ and https://github.com/panzi/socialshareprivacy - MIT License (http://www.opensource.org/licenses/mit-license.php).');
 $plugin_author = 'Malte Müller (acrylian)';
 $plugin_version = '1.4.4';
 $option_interface = 'socialshareprivacy_options';
@@ -73,7 +73,7 @@ class socialshareprivacy_options {
 					gettext_pl('delicious','socialshareprivacy')=>'socialshareprivacy_delicious',
 					gettext_pl('disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
 				),
-				'desc' => gettext_pl('NOTE: CURRENTLY NOT IMPLEMENTED! Select the social networks you wish buttons to appear','socialshareprivacy'))
+				'desc' => gettext_pl('Select the social networks you wish buttons to appear for.','socialshareprivacy'))
 		);
 		
 	return $options;
