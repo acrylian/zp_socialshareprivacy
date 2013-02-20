@@ -36,6 +36,10 @@
 .social_share_privacy_area.box li .dummy_btn {
 	margin-bottom: 10px;
 }
+.social_share_privacy_area li .dummy_btn img.privacy_dummy,
+.social_share_privacy_area li .dummy_btn iframe {
+	vertical-align: bottom;
+}
 .social_share_privacy_area li .dummy_btn iframe {
     overflow: hidden;
     height: inherit;
@@ -157,7 +161,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    width: 135px;
+    min-width: 135px;
     margin: 0;
     padding: 0;
 }
@@ -217,6 +221,7 @@
 	transition: color .5s ease-in;
 	margin: 0;
 	padding: 0;
+	white-space: nowrap;
 }
 .social_share_privacy_area li.settings_info .settings_info_menu form fieldset label.checked {
 	color: #090;

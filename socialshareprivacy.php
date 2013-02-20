@@ -72,6 +72,7 @@ class socialshareprivacy_options {
 					gettext_pl('buffer','socialshareprivacy')=>'socialshareprivacy_buffer',
 					gettext_pl('delicious','socialshareprivacy')=>'socialshareprivacy_delicious',
 					gettext_pl('disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
+					gettext_pl('Hackernews','socialshareprivacy')=>'socialshareprivacy_hackernews'
 				),
 				'desc' => gettext_pl('Select the social networks you wish buttons to appear for.','socialshareprivacy'))
 		);
@@ -101,6 +102,8 @@ function socialshareprivacyJS() {
 	<?php if(getOption('socialshareprivacy_buffer')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_delicious')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.hackernews.js"></script><?php } ?>
+
 	<?php
 	$dir = '';
 	
@@ -122,20 +125,70 @@ function socialshareprivacyJS() {
   	case 'nl_NL':
  		 ?>
 			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.js"></script>
-			<?php if(getOption('socialshareprivacy_facebook')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_twitter')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_gplus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_tumblr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_reddit')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_pinterest')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_flattr')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_stumbleupon')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_mail')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_linkedin')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_xing')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_buffer')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_delicious')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script><?php } ?>
-			<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script><?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_facebook')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.facebook.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_twitter')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.twitter.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_gplus')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.gplus.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_tumblr')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.tumblr.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_reddit')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.reddit.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_pinterest')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.pinterest.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_flattr')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.flattr.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_stumbleupon')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.stumbleupon.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_mail')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.mail.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_linkedin')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.linkedin.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_xing')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.xing.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_buffer')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.buffer.js"></script>
+			<?php } ?>
+			
+			<?php if(getOption('socialshareprivacy_delicious')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.delicious.js"></script>
+			<?php } ?>
+			<?php if(getOption('socialshareprivacy_disqus')) { ?>
+				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script>
+			<?php } ?>
+  		<?php 
+  		// only a German translation yet so skip to English for all else here
+  		if($locale != 'de_DE') {
+  			$dir = '';
+  		}
+  		if(getOption('socialshareprivacy_hackernews')) { ?>
+  			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.hackernews.js"></script>
+  		<?php } ?>
+
   		<?php
   		break;
   }
