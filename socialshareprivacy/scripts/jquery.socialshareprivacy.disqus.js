@@ -18,8 +18,9 @@
 					var key = $widget.attr("data-count");
 					var count = data.counts[0][key];
 					var text = data.text[key];
-					$widget.attr('title', count === 0 ? text.zero : count === 1 ? text.one : text.multiple.replace('{num}', count));
-					$widget.find('.count a').text(count >= 10000 ? Math.floor(count/1000)+'k' : String(count));
+					var scount = $.fn.socialSharePrivacy.formatNumber(count);
+					$widget.attr('title', count === 0 ? text.zero : count === 1 ? text.one : text.multiple.replace('{num}', scount));
+					$widget.find('.count a').text(scount);
 					$widget.addClass('init');
 				}
 			});
@@ -39,6 +40,9 @@
 	}
 
 	function request (options) {
+		// this breaks every other usage of the disqus count API:
+		window.DISQUSWIDGETS = DISQUSWIDGETS;
+
 		requestActive = true;
 		var script = document.createElement('script');
 		script.type  = "text/javascript";
@@ -50,6 +54,7 @@
 	}
 
 	function requestLoad (event) {
+		if (!event) event = window.event;
 		if (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete' || event.type === 'error') {
 			this.onload = this.onreadystatechange = this.onerror = requestLoad;
 			var $script = $(this);
@@ -83,9 +88,7 @@
 		'count'             : 'comments',
 		'onclick'           : null,
 		'button'            : function (options, uri, settings) {
-			// this breaks every other usage of the disqus count API:
-			window.DISQUSWIDGETS = DISQUSWIDGETS;
-
+			var shortname = options.shortname || window.disqus_shortname || '';
 			var $code;
 			if (settings.layout === 'line') {
 				$code = $('<div class="disqus-widget">'+
@@ -100,7 +103,7 @@
 
 			$code.attr({
 				'data-count'     : options.count,
-				'data-shortname' : options.shortname,
+				'data-shortname' : shortname,
 				'data-uri'       : uri + options.referrer_track
 			});
 
@@ -110,7 +113,7 @@
 			}
 
 			enqueue({
-				shortname : options.shortname,
+				shortname : shortname,
 				uri       : uri + options.referrer_track
 			});
 

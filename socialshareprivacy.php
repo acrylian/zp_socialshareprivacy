@@ -7,10 +7,10 @@
  * jquery.socialshareprivacy.js | 2 Klicks fuer mehr Datenschutz
  * http://www.heise.de/extras/socialshareprivacy/
  * http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html
- *
  * Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
+ * with the extensions by:
  * Copyright (c) 2012 Mathias Panzenböck
  * https://github.com/panzi/socialshareprivacy
  *
@@ -118,11 +118,11 @@ function socialshareprivacyJS() {
   	case 'nl_NL':
   		$dir = '/nl';
   		break;
+  	case 'ru_RU':
+  		$dir = '/ru';
+  		break;
   }
-  switch($locale) {
-  	case 'de_DE':
-  	case 'fr_FR':
-  	case 'nl_NL':
+  if(!empty($dir)) {
  		 ?>
 			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.js"></script>
 			
@@ -187,10 +187,7 @@ function socialshareprivacyJS() {
   		}
   		if(getOption('socialshareprivacy_hackernews')) { ?>
   			<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.hackernews.js"></script>
-  		<?php } ?>
-
-  		<?php
-  		break;
+  		<?php } 
   }
 }
 

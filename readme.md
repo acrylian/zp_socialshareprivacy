@@ -8,10 +8,10 @@ This is an adaption as a Zenphoto plugin of:
 **jquery.socialshareprivacy.js | 2 Klicks fuer mehr Datenschutz (2 clicks for more privacy)**
 * http://www.heise.de/extras/socialshareprivacy/
 * http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html
- 
 Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
 Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
 
+Wth the extensions by:
 Copyright (c) 2012 Mathias Panzenböck
 https://github.com/panzi/SocialSharePrivacy
 

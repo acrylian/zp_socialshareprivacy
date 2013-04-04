@@ -53,11 +53,12 @@
 					var item = data.results[0];
 					if (item) {
 						item = item.item;
+						var points = $.fn.socialSharePrivacy.formatNumber(item.points);
 						$code.find("a").attr("href", prot+"//news.ycombinator.com/item?id="+item.id);
-						$code.find(".points a").text(
+						$code.find(".points a").text(points).attr('title',
 							item.points === 1 ?
 							options.txt_one_point :
-							options.txt_n_points.replace(/{points}/g, String(item.points)));
+							options.txt_n_points.replace(/{points}/g, points));
 					}
 				}
 			});

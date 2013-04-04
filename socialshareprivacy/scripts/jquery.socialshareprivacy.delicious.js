@@ -43,10 +43,7 @@
 							break;
 						}
 					}
-					if (isNaN(total_posts)) total_posts = 0;
-					if (total_posts > 9999) txt_button = Math.floor(total_posts / 1E3) + "K";
-					else if (total_posts > 999) txt_button = Math.floor(total_posts / 1E3) + "," + total_posts % 1E3;
-					else if (total_posts > 0) txt_button = String(total_posts);
+					if (total_posts) txt_button = $.fn.socialSharePrivacy.formatNumber(total_posts);
 					else txt_button = options.txt_button;
 					var save_url = "http://delicious.com/save?"+$.param({
 						v:     "5",
@@ -57,22 +54,25 @@
 					});
 
 					$button.html('<a target="delicious" class="icon"><div class="delicious1"></div><div class="delicious2"></div><div class="delicious3"></div></a><a class="count" target="delicious"><i></i><b></b></a>');
-					if (settings.layout === 'line') $button.append('<div style="clear:both;"></div>');
 					$button.find('i').text(options.txt_button);
 					$button.find('b').text(txt_button);
-					$button.find('a.icon').attr("href", "http://delicious.com/url/" + hash);
-					$button.find('a.count').attr("href", save_url).click(function (event) {
+					$button.find('a.icon').attr("href", hash ? "http://delicious.com/url/" + hash : save_url);
+					var $count = $button.find('a.count').attr("href", save_url).click(function (event) {
 						window.open(save_url + "&noui&jump=close", "delicious", "toolbar=no,width=555,height=555");
 						event.preventDefault();
-					}).hover(function () {
-						var $self = $(this);
-						$self.find("b").stop(1, 1).css("display", "none");
-						$self.find("i").fadeIn();
-					}, function () {
-						var $self = $(this);
-						$self.find("i").stop(1, 1).css("display", "none");
-						$self.find("b").fadeIn();
 					});
+					
+					if (total_posts) {
+						$count.hover(function () {
+							var $self = $(this);
+							$self.find("b").stop(1, 1).css("display", "none");
+							$self.find("i").fadeIn();
+						}, function () {
+							var $self = $(this);
+							$self.find("i").stop(1, 1).css("display", "none");
+							$self.find("b").fadeIn();
+						});
+					}
 				}
 			});
 

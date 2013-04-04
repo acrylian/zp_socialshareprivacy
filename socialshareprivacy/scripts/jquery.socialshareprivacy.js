@@ -8,7 +8,7 @@
  * Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
- * Copyright (c) 2012 Mathias Panzenböck
+ * Copyright (c) 2012-2013 Mathias Panzenböck
  *
  * is released under the MIT License http://www.opensource.org/licenses/mit-license.php
  *
@@ -87,7 +87,48 @@
 			return base+path.join("/");
 		}
 	}
-	
+
+	function formatNumber (number) {
+		number = Number(number);
+
+		var prefix = "";
+		var suffix = "";
+		if (number < 0) {
+			prefix = "-";
+			number = -number;
+		}
+
+		if (number === Infinity) {
+			return prefix + "Infinity";
+		}
+
+		if (number > 9999) {
+			number = number / 1000;
+			suffix = "K";
+		}
+
+		number = Math.round(number);
+		if (number === 0) {
+			return "0";
+		}
+
+		var buf = [];
+		while (number > 0) {
+			var part = String(number % 1000);
+
+			number = Math.floor(number / 1000);
+			if (number) {
+				while (part.length < 3) {
+					part = "0"+part;
+				}
+			}
+
+			buf.unshift(part);
+		}
+
+		return prefix + buf.join(",") + suffix;
+	}
+
 	// helper function that gets the title of the current page
 	function getTitle (options, uri, settings) {
 		var title = settings && settings.title;
@@ -703,6 +744,7 @@
 	socialSharePrivacy.getEmbed   = getEmbed;
 	socialSharePrivacy.getDescription = getDescription;
 	socialSharePrivacy.abbreviateText = abbreviateText;
+	socialSharePrivacy.formatNumber   = formatNumber;
 
 	socialSharePrivacy.settings = {
 		'services'          : {},
@@ -728,4 +770,15 @@
 	};
 
 	$.fn.socialSharePrivacy = socialSharePrivacy;
+
+	// load global settings
+	$(document).ready(function () {
+		$('script[type="application/x-social-share-privacy-settings"]').each(function () {
+			var settings = (new Function('return ('+$.text(this)+');')).call(this);
+
+			if (typeof settings === "object") {
+				$.extend(true, $.fn.socialSharePrivacy.settings, settings);
+			}
+		});
+	});
 }(jQuery));
