@@ -121,6 +121,9 @@ function socialshareprivacyJS() {
   	case 'ru_RU':
   		$dir = '/ru';
   		break;
+  	case 'pl_PL':
+  		$dir = '/pl';
+  		break;
   }
   if(!empty($dir)) {
  		 ?>
