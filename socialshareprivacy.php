@@ -58,21 +58,21 @@ class socialshareprivacy_options {
 				'type' => OPTION_TYPE_CHECKBOX_UL,
 				'order' => 0,
 				'checkboxes' => array( // The definition of the checkboxes
-					gettext_pl('Facebook','socialshareprivacy')=>'socialshareprivacy_facebook',
-					gettext_pl('Twitter','socialshareprivacy')=>'socialshareprivacy_twitter',
-					gettext_pl('Google+','socialshareprivacy')=>'socialshareprivacy_gplus',
-					gettext_pl('Tumblr','socialshareprivacy')=>'socialshareprivacy_tumblr',
-					gettext_pl('Reddit','socialshareprivacy')=>'socialshareprivacy_Reddit',
-					gettext_pl('Pinterest','socialshareprivacy')=>'socialshareprivacy_pinterest',
-					gettext_pl('flattr','socialshareprivacy')=>'socialshareprivacy_flattr',
-					gettext_pl('Stumbleupon','socialshareprivacy')=>'socialshareprivacy_stumbleupon',
-					gettext_pl('Mail','socialshareprivacy')=>'socialshareprivacy_mail',
-					gettext_pl('linkedin','socialshareprivacy')=>'socialshareprivacy_linkedin',
-					gettext_pl('xing','socialshareprivacy')=>'socialshareprivacy_xing',
-					gettext_pl('buffer','socialshareprivacy')=>'socialshareprivacy_buffer',
-					gettext_pl('delicious','socialshareprivacy')=>'socialshareprivacy_delicious',
-					gettext_pl('disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
-					gettext_pl('Hackernews','socialshareprivacy')=>'socialshareprivacy_hackernews'
+					'Facebook','socialshareprivacy'=>'socialshareprivacy_facebook',
+					'Twitter','socialshareprivacy'=>'socialshareprivacy_twitter',
+					'Google+','socialshareprivacy'=>'socialshareprivacy_gplus',
+					'Tumblr','socialshareprivacy'=>'socialshareprivacy_tumblr',
+					'Reddit','socialshareprivacy'=>'socialshareprivacy_Reddit',
+					'Pinterest','socialshareprivacy'=>'socialshareprivacy_pinterest',
+					'flattr','socialshareprivacy'=>'socialshareprivacy_flattr',
+					'Stumbleupon','socialshareprivacy'=>'socialshareprivacy_stumbleupon',
+					gettext('Mail','socialshareprivacy')=>'socialshareprivacy_mail',
+					'linkedin','socialshareprivacy'=>'socialshareprivacy_linkedin',
+					'xing','socialshareprivacy'=>'socialshareprivacy_xing',
+					'buffer','socialshareprivacy'=>'socialshareprivacy_buffer',
+					'delicious','socialshareprivacy'=>'socialshareprivacy_delicious',
+					'disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
+					'Hackernews','socialshareprivacy'=>'socialshareprivacy_hackernews'
 				),
 				'desc' => gettext_pl('Select the social networks you wish buttons to appear for.','socialshareprivacy'))
 		);
@@ -102,7 +102,7 @@ function socialshareprivacyJS() {
 	<?php if(getOption('socialshareprivacy_buffer')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.buffer.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_delicious')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.delicious.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.disqus.js"></script><?php } ?>
-	<?php if(getOption('socialshareprivacy_disqus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.hackernews.js"></script><?php } ?>
+	<?php if(getOption('socialshareprivacy_hackernews')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.hackernews.js"></script><?php } ?>
 
 	<?php
 	$dir = '';
@@ -184,8 +184,8 @@ function socialshareprivacyJS() {
 				<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts<?php echo $dir; ?>/jquery.socialshareprivacy.disqus.js"></script>
 			<?php } ?>
   		<?php 
-  		// only a German translation yet so skip to English for all else here
-  		if($locale != 'de_DE') {
+  		// For this not translations for all available!
+  		if($locale == 'fr_FR' || $locale == 'nl_NL') {
   			$dir = '';
   		}
   		if(getOption('socialshareprivacy_hackernews')) { ?>
