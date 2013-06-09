@@ -34,7 +34,7 @@
 $plugin_is_filter = 9|THEME_PLUGIN;
 $plugin_description = gettext('A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and more). An adaption as a Zenphoto plugin of the scripts by http://www.heise.de/extras/socialshareprivacy/ and https://github.com/panzi/socialshareprivacy - MIT License (http://www.opensource.org/licenses/mit-license.php).');
 $plugin_author = 'Malte Müller (acrylian)';
-$plugin_version = '1.4.4';
+$plugin_version = '1.0';
 $option_interface = 'socialshareprivacy_options';
 zp_register_filter('theme_head','socialshareprivacyJS');
 
