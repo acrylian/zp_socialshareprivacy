@@ -29,6 +29,7 @@
  * Heise Zeitschriften Verlag GmbH & Co. KG and Mathias Panzenböck
  *
  * @package plugins
+ * @subpackage misc
  */
 
 $plugin_is_filter = 9|THEME_PLUGIN;
