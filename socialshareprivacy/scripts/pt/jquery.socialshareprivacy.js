@@ -7,7 +7,7 @@
  * Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
- * Copyright (c) 2012 Mathias Panzenböck
+ * Copyright (c) 2012 Augusto Stoffel
  *
  * is released under the MIT License http://www.opensource.org/licenses/mit-license.php
  *
@@ -15,9 +15,8 @@
  */
 
 jQuery.extend(jQuery.fn.socialSharePrivacy.settings, {
-	'info_link'         : 'http://panzi.github.io/SocialSharePrivacy/index.de.html',
-	'txt_settings'      : 'Einstellungen',
-	'txt_help'          : 'Wenn Sie diese Felder durch einen Klick aktivieren, werden Informationen an Facebook, Twitter oder Google etc. in die USA &uuml;bertragen und unter Umst&auml;nden auch dort gespeichert. N&auml;heres erfahren Sie durch einen Klick auf das <em>i</em>.',
-	'settings_perma'    : 'Dauerhaft aktivieren und Daten&uuml;ber&shy;tragung zustimmen:',
-	'language'          : 'de'
+	'txt_settings'      : 'Configura&ccedil;&otilde;es',
+	'txt_help'          : 'Se voc&ecirc; ativar algum destes campos atrav&eacute;s de um clique, dados ser&atilde;o enviados a terceiros (Facebook, Twitter, Google, etc.) e armazenados por eles. Para mais detalhes, clique em <em>i</em>.',
+	'settings_perma'    : 'Habilitar os seguintes bot&otilde;es permanentemente:',
+	'language'          : 'pt'
 });

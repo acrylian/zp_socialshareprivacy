@@ -426,6 +426,28 @@
 						this.children('.social_share_privacy_area').remove();
 						this.removeData('social-share-privacy-options');
 						break;
+
+					case "enabled":
+						var enabled = {};
+						this.each(function () {
+							var $self = $(this);
+							var options = $self.data('social-share-privacy-options');
+							for (var name in options.services) {
+								enabled[name] = $self.find('.'+(options.services[name].class_name||name)+' .switch').hasClass('on');
+							}
+						});
+						return enabled;
+
+					case "disabled":
+						var disabled = {};
+						this.each(function () {
+							var $self = $(this);
+							var options = $self.data('social-share-privacy-options');
+							for (var name in options.services) {
+								disabled[name] = $self.find('.'+(options.services[name].class_name||name)+' .switch').hasClass('off');
+							}
+						});
+						return disabled;
 	
 					default:
 						throw new Error("socialSharePrivacy: unknown command: "+command);
@@ -474,6 +496,14 @@
 					case "options":
 						$.extend(true, options, arg);
 						break;
+
+					case "enabled":
+						var options = this.data('social-share-privacy-options');
+						return this.find('.'+(options.services[arg].class_name||arg)+' .switch').hasClass('on');
+
+					case "disabled":
+						var options = this.data('social-share-privacy-options');
+						return this.find('.'+(options.services[arg].class_name||arg)+' .switch').hasClass('off');
 
 					default:
 						throw new Error("socialSharePrivacy: unknown command: "+command);
@@ -748,7 +778,7 @@
 
 	socialSharePrivacy.settings = {
 		'services'          : {},
-		'info_link'         : 'http://panzi.github.com/SocialSharePrivacy/',
+		'info_link'         : 'http://panzi.github.io/SocialSharePrivacy/',
 		'info_link_target'  : '',
 		'txt_settings'      : 'Settings',
 		'txt_help'          : 'If you activate these fields via click, data will be sent to a third party (Facebook, Twitter, Google, ...) and stored there. For more details click <em>i</em>.',

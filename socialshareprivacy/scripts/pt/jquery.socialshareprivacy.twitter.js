@@ -7,8 +7,7 @@
  * Copyright (c) 2011 Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG, http://www.heise.de
  *
- * Copyright (c) 2012 Mathias Panzenböck
- * Polish translation (c) 2013 Simon Zelazny
+ * Copyright (c) 2012 Augusto Stoffel
  *
  * is released under the MIT License http://www.opensource.org/licenses/mit-license.php
  *
@@ -17,7 +16,9 @@
 
 
 jQuery.extend(jQuery.fn.socialSharePrivacy.settings.services.twitter, {
-  'txt_info' : 'Dwa kliknięcia &ndash; więcej prywatności: Kliknięcie tutaj uruchomi przycisk "Tweetnij". Samo uchuchomienie przycisku powoduje wysłanie Twoich danych do Twittera. Kliknij w <em>i</em>, aby dowiedzieć się więcej.',
-	'txt_off'  : 'brak połączenia z Twitterem',
-	'txt_on'   : 'połączono z Twitterem'
+	'dummy_line_img'    : 'images/pt/dummy_twitter.png',
+	'dummy_box_img'     : 'images/pt/dummy_box_twitter.png',
+	'txt_info' : 'Dois cliques para mais privacidade: o bot&atilde;o do Twitter ser&aacute; ativado quando voc&ecirc; clicar aqui. Ativar este bot&atilde;o enviar&aacute; dados ao Twitter &ndash; veja <em>i</em>.',
+	'txt_off'  : 'n&atilde;o conectado ao Twitter',
+	'txt_on'   : 'conectado ao Twitter'
 });

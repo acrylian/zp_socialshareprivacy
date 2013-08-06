@@ -125,6 +125,12 @@ function socialshareprivacyJS() {
   	case 'pl_PL':
   		$dir = '/pl';
   		break;
+  	case 'pt_PT':
+  		$dir = '/pt';
+  		break;
+  	case 'es_ES':
+  		$dir = '/es';
+  		break;
   }
   if(!empty($dir)) {
  		 ?>
