@@ -72,7 +72,7 @@ class socialshareprivacy_options {
 					'xing','socialshareprivacy'=>'socialshareprivacy_xing',
 					'buffer','socialshareprivacy'=>'socialshareprivacy_buffer',
 					'delicious','socialshareprivacy'=>'socialshareprivacy_delicious',
-					'disqus','socialshareprivacy')=>'socialshareprivacy_disqus',
+					'disqus','socialshareprivacy'=>'socialshareprivacy_disqus',
 					'Hackernews','socialshareprivacy'=>'socialshareprivacy_hackernews'
 				),
 				'desc' => gettext_pl('Select the social networks you wish buttons to appear for.','socialshareprivacy'))
