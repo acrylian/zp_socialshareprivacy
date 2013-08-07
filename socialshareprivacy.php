@@ -13,11 +13,9 @@
  * with the extensions by:
  * Copyright (c) 2012 Mathias Panzenböck
  * https://github.com/panzi/socialshareprivacy
- *
- * A basic plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and others). 
- *
+ * 
  * Place <?php printSocialSharePrivacyButtons(); ?> where you wish the buttons to appear.
- * You might need to adjust/override the plugin's default css stylings to fit your site design. 
+ * You might need to adjust/override the plugin's default css stylings to fit your site's design. 
  *
  * The plugin does not provide any options for the sharing itself. Modify the jQuery calls within printSocialSharePrivacyButtons() to your liking.
  *
@@ -25,7 +23,7 @@
  *
  *
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @author Malte Müller (acrylian) adapting from Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
+ * @author Malte Müller (acrylian) adapted from Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
  * Heise Zeitschriften Verlag GmbH & Co. KG and Mathias Panzenböck
  *
  * @package plugins
