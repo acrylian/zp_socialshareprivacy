@@ -52,26 +52,26 @@ class socialshareprivacy_options {
 			Options types are the same for plugins and themes.
 		*/
 		$options = array(
-			gettext_pl('Social networks','socialshareprivacy') => array(
+			gettext('Social networks') => array(
 				'key' => 'socialshareprivacy_socialnetworks',
 				'type' => OPTION_TYPE_CHECKBOX_UL,
 				'order' => 0,
 				'checkboxes' => array( // The definition of the checkboxes
-					'Facebook','socialshareprivacy'=>'socialshareprivacy_facebook',
-					'Twitter','socialshareprivacy'=>'socialshareprivacy_twitter',
-					'Google+','socialshareprivacy'=>'socialshareprivacy_gplus',
-					'Tumblr','socialshareprivacy'=>'socialshareprivacy_tumblr',
-					'Reddit','socialshareprivacy'=>'socialshareprivacy_Reddit',
-					'Pinterest','socialshareprivacy'=>'socialshareprivacy_pinterest',
-					'flattr','socialshareprivacy'=>'socialshareprivacy_flattr',
-					'Stumbleupon','socialshareprivacy'=>'socialshareprivacy_stumbleupon',
-					gettext('Mail','socialshareprivacy')=>'socialshareprivacy_mail',
-					'linkedin','socialshareprivacy'=>'socialshareprivacy_linkedin',
-					'xing','socialshareprivacy'=>'socialshareprivacy_xing',
-					'buffer','socialshareprivacy'=>'socialshareprivacy_buffer',
-					'delicious','socialshareprivacy'=>'socialshareprivacy_delicious',
-					'disqus','socialshareprivacy'=>'socialshareprivacy_disqus',
-					'Hackernews','socialshareprivacy'=>'socialshareprivacy_hackernews'
+					'Facebook'=>'socialshareprivacy_facebook',
+					'Twitter' =>'socialshareprivacy_twitter',
+					'Google+'=>'socialshareprivacy_gplus',
+					'Tumblr'=>'socialshareprivacy_tumblr',
+					'Reddit'=>'socialshareprivacy_Reddit',
+					'Pinterest'=>'socialshareprivacy_pinterest',
+					'flattr'=>'socialshareprivacy_flattr',
+					'Stumbleupon'=>'socialshareprivacy_stumbleupon',
+					'Mail'=>'socialshareprivacy_mail',
+					'linkedin'=>'socialshareprivacy_linkedin',
+					'xing' =>'socialshareprivacy_xing',
+					'buffer' =>'socialshareprivacy_buffer',
+					'delicious'=>'socialshareprivacy_delicious',
+					'disqus' =>'socialshareprivacy_disqus',
+					'Hackernews' =>'socialshareprivacy_hackernews'
 				),
 				'desc' => gettext_pl('Select the social networks you wish buttons to appear for.','socialshareprivacy'))
 		);
