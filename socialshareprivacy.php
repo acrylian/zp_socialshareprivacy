@@ -79,6 +79,7 @@ class socialshareprivacy_options {
 	return $options;
 	}
 }
+
 /**
 * Adds the jQuery calls to the theme head via filter
 */
@@ -86,7 +87,7 @@ function socialshareprivacyJS() {
 	$locale = getUserLocale();
 	?>
 	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/jquery.cookies.js"></script>
-	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script><?php } ?>
+	<script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.js"></script>
 	<?php if(getOption('socialshareprivacy_facebook')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.facebook.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_twitter')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.twitter.js"></script><?php } ?>
 	<?php if(getOption('socialshareprivacy_gplus')) { ?><script type="text/javascript" src="<?php echo FULLWEBPATH.'/'.USER_PLUGIN_FOLDER; ?>/socialshareprivacy/scripts/jquery.socialshareprivacy.gplus.js"></script><?php } ?>
