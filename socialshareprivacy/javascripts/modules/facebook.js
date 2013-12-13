@@ -16,7 +16,7 @@
 (function ($, undefined) {
 	"use strict";
 
-	var locales = {"af":["ZA"],"ar":["AR"],"az":["AZ"],"be":["BY"],"bg":["BG"],"bn":["IN"],"bs":["BA"],"ca":["ES"],"cs":["CZ"],"cy":["GB"],"da":["DK"],"de":["DE"],"el":["GR"],"en":["US","GB","PI","UD"],"eo":["EO"],"es":["ES","LA"],"et":["EE"],"eu":["ES"],"fa":["IR"],"fb":["LT"],"fi":["FI"],"fo":["FO"],"fr":["CA","FR"],"fy":["NL"],"ga":["IE"],"gl":["ES"],"he":["IL"],"hi":["IN"],"hr":["HR"],"hu":["HU"],"hy":["AM"],"id":["ID"],"is":["IS"],"it":["IT"],"ja":["JP"],"ka":["GE"],"km":["KH"],"ko":["KR"],"ku":["TR"],"la":["VA"],"lt":["LT"],"lv":["LV"],"mk":["MK"],"ml":["IN"],"ms":["MY"],"nb":["NO"],"ne":["NP"],"nl":["NL"],"nn":["NO"],"pa":["IN"],"pl":["PL"],"ps":["AF"],"pt":["BR","PT"],"ro":["RO"],"ru":["RU"],"sk":["SK"],"sl":["SI"],"sq":["AL"],"sr":["RS"],"sv":["SE"],"sw":["KE"],"ta":["IN"],"te":["IN"],"th":["TH"],"tl":["PH"],"tr":["TR"],"uk":["UA"],"vi":["VN"],"zh":["CN","HK","TW"]};
+	var locales = {"af":["ZA"],"ar":["AR"],"az":["AZ"],"be":["BY"],"bg":["BG"],"bn":["IN"],"bs":["BA"],"ca":["ES"],"cs":["CZ"],"cy":["GB"],"da":["DK"],"de":["DE"],"el":["GR"],"en":["GB","PI","UD","US"],"eo":["EO"],"es":["ES","LA"],"et":["EE"],"eu":["ES"],"fa":["IR"],"fb":["LT"],"fi":["FI"],"fo":["FO"],"fr":["CA","FR"],"fy":["NL"],"ga":["IE"],"gl":["ES"],"he":["IL"],"hi":["IN"],"hr":["HR"],"hu":["HU"],"hy":["AM"],"id":["ID"],"is":["IS"],"it":["IT"],"ja":["JP"],"ka":["GE"],"km":["KH"],"ko":["KR"],"ku":["TR"],"la":["VA"],"lt":["LT"],"lv":["LV"],"mk":["MK"],"ml":["IN"],"ms":["MY"],"nb":["NO"],"ne":["NP"],"nl":["NL"],"nn":["NO"],"pa":["IN"],"pl":["PL"],"ps":["AF"],"pt":["BR","PT"],"ro":["RO"],"ru":["RU"],"sk":["SK"],"sl":["SI"],"sq":["AL"],"sr":["RS"],"sv":["SE"],"sw":["KE"],"ta":["IN"],"te":["IN"],"th":["TH"],"tl":["PH"],"tr":["TR"],"uk":["UA"],"vi":["VN"],"zh":["CN","HK","TW"]};
 
 	$.fn.socialSharePrivacy.settings.services.facebook = {
 		'status'            : true,
@@ -28,7 +28,7 @@
 		'txt_off'           : 'not connected to Facebook',
 		'txt_on'            : 'connected to Facebook',
 		'perma_option'      : true,
-		'display_name'      : 'Facebook',
+		'display_name'      : 'Facebook Like/Recommend',
 		'referrer_track'    : '',
 		'action'            : 'like',
 		'colorscheme'       : 'light',
@@ -75,8 +75,7 @@
 				params.layout = 'box_count';
 			}
 			return $('<iframe scrolling="no" frameborder="0" allowtransparency="true"></iframe>').attr(
-				'src',('https:' === document.location.protocol ? 'https:' : 'http:')+
-				'//www.facebook.com/plugins/like.php?'+$.param(params));
+				'src', 'https://www.facebook.com/plugins/like.php?'+$.param(params));
 		}
 	};
 })(jQuery);

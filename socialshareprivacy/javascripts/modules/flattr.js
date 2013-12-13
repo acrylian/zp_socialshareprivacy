@@ -24,7 +24,7 @@
 
 	$.fn.socialSharePrivacy.settings.services.flattr = {
 		'status'            : true, 
-		'button_class'      : 'flatter',
+		'button_class'      : 'flattr',
 		'dummy_line_img'    : 'images/dummy_flattr.png',
 		'dummy_box_img'     : 'images/dummy_box_flattr.png',
 		'dummy_alt'         : '"Flattr"-Dummy',
@@ -61,8 +61,8 @@
 			if (settings.layout === 'line') attrs['data-flattr-button'] = 'compact';
 
 			var $code = $('<a class="FlattrButton">' + get(this, options, uri, settings, 'description') +
-				'</a><script text="text/javscript" src="'+(location.protocol === 'https:' ? 'https:' : 'http:') +
-				'//api.flattr.com/js/0.6/load.js?mode=auto"></script>');
+				'</a><script text="text/javscript" src="'+
+				'https://api.flattr.com/js/0.6/load.js?mode=auto"></script>');
 
 			$code.filter('a').attr(attrs);
 

@@ -28,18 +28,23 @@
 		'status'            : true,
 		'privacy'           : 'safe',
 		'button_class'      : 'mail',
-		'txt_info'          : 'Send this per email to a friend.',
+		'line_img'          : 'images/mail.png',
+		'box_img'           : 'images/box_mail.png',
+		'txt_info'          : 'Send this via email to a friend.',
 		'txt_button'        : 'Send Email',
 		'display_name'      : 'Mail',
 		'referrer_track'    : '',
 		'subject'           : $.fn.socialSharePrivacy.getTitle,
 		'body'              : getBody,
 		'button'            : function (options, uri, settings) {
-			return $('<a>' + options.txt_button + '</a>').attr(
+			return $('<a/>').attr(
 				'href', 'mailto:?'+$.param({
 					subject : get(this, options, uri, settings, 'subject'),
 					body    : get(this, options, uri, settings, 'body')
-				}).replace(/\+/g,'%20'));
+				}).replace(/\+/g,'%20')).append($('<img>', {
+					alt: options.txt_button,
+					src: options.path_prefix + (settings.layout === 'line' ? options.line_img : options.box_img)
+				}));
 		}
 	};
 })(jQuery);

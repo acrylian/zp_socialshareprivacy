@@ -11,20 +11,20 @@
 	"use strict";
 
 	function getQuote (options, uri, settings) {
-		var text = $('article, p').text();
+		var text = $.trim($('article, p').text());
 		
 		if (text.length <= 600) {
 			return text;
 		}
 
 		var abbrev = text.slice(0, 597);
-		if (!/\W/.test(text.charAt(length - 3))) {
+		if (/^\w+$/.test(text.slice(596,598))) {
 			var match = /^(.*)\s\S*$/.exec(abbrev);
 			if (match) {
 				abbrev = match[1];
 			}
 		}
-		return abbrev + "\u2026";
+		return $.trim(abbrev) + "\u2026";
 	}
 
 	function getClickthru (options, uri) {
@@ -56,6 +56,8 @@
 		'status'            : true,
 		'privacy'           : 'safe',
 		'button_class'      : 'tumblr',
+		'line_img'          : 'images/tumblr.png',
+		'box_img'           : 'images/box_tumblr.png',
 		'txt_info'          : 'Post this on Tumblr.',
 		'txt_button'        : 'Share on Tubmlr',
 		'display_name'      : 'Tumblr',
@@ -74,30 +76,34 @@
 		// type: 'photo' or 'video':
 		'caption'           : $.fn.socialSharePrivacy.getDescription,
 		'button'            : function (options, uri, settings) {
-			var $code = $('<a target="_blank">' + options.txt_button + '</a>').click(openTumblr);
+			var $code = $('<a target="_blank"/>').click(openTumblr);
+			$('<img>', {
+				alt: options.txt_button,
+				src: options.path_prefix + (settings.layout === 'line' ? options.line_img : options.box_img)
+			}).appendTo($code);
 			switch (options.type) {
 				case 'link':
-					return $code.attr('href', 'http://www.tumblr.com/share/link?'+$.param({
+					return $code.attr('href', 'https://www.tumblr.com/share/link?'+$.param({
 						url         : uri + options.referrer_track,
 						name        : get(this, options, uri, settings, 'name'),
 						description : get(this, options, uri, settings, 'description')
 					}));
 
 				case 'quote':
-					return $code.attr('href', 'http://www.tumblr.com/share/quote?'+$.param({
+					return $code.attr('href', 'https://www.tumblr.com/share/quote?'+$.param({
 						source      : uri + options.referrer_track,
 						quote       : get(this, options, uri, settings, 'quote')
 					}));
 
 				case 'photo':
-					return $code.attr('href', 'http://www.tumblr.com/share/photo?'+$.param({
+					return $code.attr('href', 'https://www.tumblr.com/share/photo?'+$.param({
 						source      : get(this, options, uri, settings, 'photo'),
 						caption     : get(this, options, uri, settings, 'caption'),
 						clickthrou  : get(this, options, uri, settings, 'clickthrou')
 					}));
 
 				case 'video':
-					return $code.attr('href', 'http://www.tumblr.com/share/video?'+$.param({
+					return $code.attr('href', 'https://www.tumblr.com/share/video?'+$.param({
 						embed       : get(this, options, uri, settings, 'embed'),
 						caption     : get(this, options, uri, settings, 'caption')
 					}));
