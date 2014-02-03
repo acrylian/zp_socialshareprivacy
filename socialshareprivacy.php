@@ -130,6 +130,9 @@ function socialshareprivacyJS() {
   	case 'es_ES':
   		$dir = 'locale/es';
   		break;
+  	case 'it_IT':
+  		$dir = 'locale/it';
+  		break;
   }
   if(!empty($dir)) {
  		 ?>
