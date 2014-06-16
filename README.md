@@ -4,6 +4,8 @@ A Zenphoto plugin that provides a function to add privacy friendly, non tracking
 
 Put the file in your `/plugins` folder and modify your theme to use it. Please see the file comments itself for more usage information.
 
+##Usage
+
 Place `<?php printSocialSharePrivacyButtons(); ?>` where you wish the buttons to appear. You might need to adjust/override the plugin's default css stylings to fit your site's design. 
 
 The plugin does not provide any options for the sharing itself. Modify the jQuery calls within `printSocialSharePrivacyButtons()` to your liking.
