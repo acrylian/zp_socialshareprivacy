@@ -13,6 +13,12 @@
  * with the extensions by:
  * Copyright (c) 2012 Mathias Panzenböck
  * https://github.com/panzi/socialshareprivacy
+ * @license MIT <http://www.opensource.org/licenses/mit-license.php>
+ *
+ * The file stylesheets/jquery.socialshareprivacy.delicious.css is licensed under the Apache License, Version 2.0:
+ * @license Apache 2.0 <http://www.apache.org/licenses/LICENSE-2.0>
+ * Copyright (c) 2012 Mathias Panzenböck
+ * Copyright (c) 2010 [Mike @ moretechtips.net]
  * 
  * Place <?php printSocialSharePrivacyButtons(); ?> where you wish the buttons to appear.
  * You might need to adjust/override the plugin's default css stylings to fit your site's design. 
@@ -21,11 +27,8 @@
  *
  * Note: The button texts are available in English, French and German. The plugin text itself are not yet translated.
  *
- *
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @author Malte Müller (acrylian) adapted from Hilko Holweg, Sebastian Hilbig, Nicolas Heiringhoff, Juergen Schmidt,
- * Heise Zeitschriften Verlag GmbH & Co. KG and Mathias Panzenböck
- *
+ * @author Malte Müller (acrylian) <info@maltem.de>
+ * @license GPL v3 or later (Zenphoto plugin)
  * @package plugins
  * @subpackage misc
  */
