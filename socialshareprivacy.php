@@ -28,6 +28,7 @@
  * Note: The button texts are available in English, French and German. The plugin text itself are not yet translated.
  *
  * @author Malte Müller (acrylian) <info@maltem.de>
+ * @copyright 2014 Malte Müller
  * @license GPL v3 or later (Zenphoto plugin)
  * @package plugins
  * @subpackage misc
