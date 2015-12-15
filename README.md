@@ -2,7 +2,11 @@ zp_socialshareprivacy
 ==========
 A [Zenphoto](http://www.zenphoto.org) plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and others). 
 
-Put the file in your `/plugins` folder and modify your theme to use it. Please see the file comments itself for more usage information.
+## Installation
+
+- Put the file `zp_socialshareprivacy.php` and the folder of the same name into your `/plugins` folder and enable it.
+- Modify your theme to use it. 
+- Please see the file comments itself for more usage information.
 
 ##Usage
 
