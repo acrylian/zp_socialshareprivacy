@@ -1,5 +1,9 @@
 zp_socialshareprivacy
 ==========
+
+**Note:** This plugin is not actively developed. Try my [Scriptless Socialsharing plugin](https://github.com/acrylian/scriptless-socialsharing) instead.
+
+
 A [Zenphoto](http://www.zenphoto.org) plugin that provides a function to add privacy friendly, non tracking social network share buttons (Facebook,Twitter, Google+ and others). 
 
 ## Installation
