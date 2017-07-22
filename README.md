@@ -12,7 +12,7 @@ A [Zenphoto](http://www.zenphoto.org) plugin that provides a function to add pri
 - Modify your theme to use it. 
 - Please see the file comments itself for more usage information.
 
-##Usage
+## IchUsage
 
 Place `<?php printSocialSharePrivacyButtons(); ?>` where you wish the buttons to appear. You might need to adjust/override the plugin's default css stylings to fit your site's design. 
 
